@@ -20,7 +20,6 @@
      brew install ffmpeg
      ```
    * **Other operating systems:** Please refer to the official [FFmpeg documentation](https://ffmpeg.org/).
-This is clear, concise, and easy to follow.  It includes:
 
 4. **Run the application:**
 
