@@ -1,0 +1,16 @@
+{"name": "youtube-to-mp3-converter",
+  "version": "1.0.0",
+  "description": "A web application to download MP3 audio from YouTube videos.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "youtube-dl-exec": "^3.0.15"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

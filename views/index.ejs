@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>YouTube to MP3 Converter</title>
+  </head>
+  <body>
+    <div class="top-container">
+      <form action="/convert-mp3" method="POST" id="form">
+        <h1><i class="fa-brands fa-youtube"></i>YouTube to MP3 Converter</h1>
+        <p>Paste the URL of the video here:</p>
+        <div>
+          <input type="text" name="videoUrl" placeholder="Video URL" />
+          <button type="submit">Convert</button>
+        </div>
+
+        <div class="bottom-container">
+          <% if (typeof success !== 'undefined') { %>
+          <div class="success">
+            <% if (success) { %>
+            <h2><%= songTitle %></h2>
+            <p>You can download the MP3 file by clicking the button below.</p>
+            <div>
+              <a
+                target="_blank"
+                href="<%= songLink %>"
+                download="<%= songTitle %>.mp3"
+              >
+                <button type="button" id="download-btn">Download MP3</button>
+              </a>
+            </div>
+            <% } else { %>
+            <div class="errors">
+              <p><%= message %></p>
+            </div>
+            <% } %>
+          </div>
+          <% } %>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
